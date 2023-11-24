@@ -8,6 +8,11 @@ const config: CapacitorConfig = {
     // androidScheme: 'lifeline',
     iosScheme: 'lifeline',
     cleartext: true
+  },
+  plugins: {
+    CapacitorHttp: {
+      enabled: true
+    }
   }
 };
 

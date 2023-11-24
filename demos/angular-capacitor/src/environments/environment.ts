@@ -3,12 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiUrl: 'http://lifeline:8080',
   production: false,
   auth_config: {
-    client_id: 'appauth',
-    server_host: 'https://localhost:5001',
-    redirect_url: 'com.appauth.demo://callback',
-    end_session_redirect_url: 'com.appauth.demo://endsession',
+    client_id: 'gateway',
+    server_host: 'http://lifeline:9080/realms/lifeline',
+    redirect_url: 'lifeline://callback',
+    end_session_redirect_url: 'lifeline://endsession',
     scopes: 'openid offline_access',
     pkce: true
   }
