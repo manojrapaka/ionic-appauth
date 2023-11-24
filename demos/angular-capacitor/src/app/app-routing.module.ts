@@ -6,8 +6,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', canActivate: [AuthGuardService], loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) },
   { path: 'landing', loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule) },
-  { path: 'auth/callback', loadChildren: () => import('./auth/auth-callback/auth-callback.module').then(m => m.AuthCallbackPageModule) },
-  { path: 'auth/endsession', loadChildren: () => import('./auth/end-session/end-session.module').then(m => m.EndSessionPageModule) },
+  { path: 'signout-success', loadChildren: () => import('./auth/signout-success/signout-success.module').then(m => m.SignoutSuccessPageModule) },
+  { path: 'callback', loadChildren: () => import('./auth/auth-callback/auth-callback.module').then(m => m.AuthCallbackPageModule) },
+  { path: 'logout', loadChildren: () => import('./auth/end-session/end-session.module').then(m => m.EndSessionPageModule) },
+  { path: 'endsession', loadChildren: () => import('./auth/end-session/end-session.module').then(m => m.EndSessionPageModule) },
 ];
 
 @NgModule({

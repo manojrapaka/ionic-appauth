@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'ionic-appauth';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.page.html',
-  styleUrls: ['./landing.page.scss'],
+  selector: 'app-signout-success',
+  templateUrl: './signout-success.page.html',
+  styleUrls: ['./signout-success.page.scss'],
 })
-export class LandingPage {
+export class SignoutSuccessPage {
   events$ = this.auth.events$;
+  sub: Subscription;
 
   constructor(
     private auth: AuthService,
